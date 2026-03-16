@@ -4,13 +4,22 @@ import FAQSchema from '../components/FAQSchema.astro';
 import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
 import { ciudades, EMPRESA } from '../data/index';
 import { siteConfig } from '../config/site';
-import { content } from '../config/content';
-
-const title       = `Preguntas frecuentes | ${EMPRESA.nombre}`;
-const description = `Resolvemos las dudas más habituales sobre ${siteConfig.serviceType} en ${ciudades.map(c=>c.nombre).join(', ')}: presupuesto, plazos, urgencias y zonas de cobertura.`;
+import { content as rawContent } from '../config/content';
 
 const ciudad    = ciudades[0].nombre;
 const canonical = `${siteConfig.web}/faq/`;
+
+const rc = (str: string) => str.replace(/\{\{city\}\}/g, ciudad);
+function deepC(obj: any): any {
+  if (typeof obj === 'string') return rc(obj);
+  if (Array.isArray(obj)) return obj.map(deepC);
+  if (obj && typeof obj === 'object') return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, deepC(v)]));
+  return obj;
+}
+const content = deepC(rawContent);
+
+const title       = `Preguntas frecuentes | ${EMPRESA.nombre}`;
+const description = `Resolvemos las dudas más habituales sobre ${siteConfig.serviceType} en ${ciudades.map(c=>c.nombre).join(', ')}: presupuesto, plazos, urgencias y zonas de cobertura.`;
 
 const faqs = content.faqs;
 ---

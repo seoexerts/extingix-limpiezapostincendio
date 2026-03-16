@@ -4,11 +4,18 @@ import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
 import { ciudades, EMPRESA } from '../data/index';
 import { siteConfig } from '../config/site';
-import { content } from '../config/content';
+import { content as rawContent } from '../config/content';
 
 const mainCiudad = ciudades[0];
-// Helper: reemplaza {{city}} por la ciudad principal
+// Reemplaza {{city}} en cualquier string, recursivamente en todo el objeto content
 const c = (str: string) => str.replace(/\{\{city\}\}/g, siteConfig.mainCity);
+function deepC(obj: any): any {
+  if (typeof obj === 'string') return c(obj);
+  if (Array.isArray(obj)) return obj.map(deepC);
+  if (obj && typeof obj === 'object') return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, deepC(v)]));
+  return obj;
+}
+const content = deepC(rawContent);
 
 const canonical   = `${siteConfig.web}/`;
 const title       = `${content.hero.h1main} en ${siteConfig.mainCity} – Presupuesto gratis | ${siteConfig.businessName}`;
