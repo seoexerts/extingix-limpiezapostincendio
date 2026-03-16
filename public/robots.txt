@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://extinguix-limpieza-post-incendio.pages.dev/sitemap-index.xml

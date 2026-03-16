@@ -1,0 +1,183 @@
+{
+  "slug": "barcelona",
+  "nombre": "Barcelona",
+  "provincia": "Barcelona",
+  "lat": 41.43979923200723,
+  "lng": 2.2011554526584476,
+  "telefono": "+34 633 75 96 49",
+  "email": "seoexpertsslu@gmail.com",
+  "direccion": "Carrer de Lima, 2, Sant Andreu",
+  "codigoPostal": "08030 ",
+  "zonas": [
+    "Les Corts",
+    "Sarrià-Sant Gervasi",
+    "Gràcia",
+    "l'Eixample",
+    "Horta-Guinardó",
+    "Sant Martí",
+    "Nou Barris",
+    "Sants-Montjuïc",
+    "Ciutat Vella",
+    "Poblenou",
+    "Collserola",
+    "Trastámara",
+    "La Mina",
+    "Bon Pastor",
+    "Vilaprius"
+  ],
+  "serviciosActivos": [
+    "limpieza-post-incendio",
+    "limpieza-post-inundacion",
+    "limpieza-post-mortem",
+    "limpieza-diogenes",
+    "descontaminacion",
+    "restauracion-inmueble"
+  ],
+  "seoIntro": "Barcelona, la vibrante capital de {provincia}, alberga a más de 1.6 millones de habitantes y se extiende por una superficie de 101,4 km². Con barrios emblemáticos como Gràcia y el Eixample, nuestra empresa Extingix ofrece servicios especializados de limpieza post incendio en toda {ciudad} para restaurar la seguridad y tranquilidad de sus hogares.",
+  "metaDesc": "Extingix: Limpiezas profesionales post incendio en {ciudad}. Recupera tu hogar rápido y seguro con nuestros expertos. ¡Solicita presupuesto!",
+  "ciudadesSecundarias": [
+    {
+      "nombre": "Hospitalet de Llobregat",
+      "slug": "hospitalet-de-llobregat",
+      "seoIntro": "L'Hospitalet de Llobregat, a la {provincia} de Barcelona, es la segunda ciudad más poblada de Cataluña.  Conecta con Barcelona gracias al metro y cuenta con una importante actividad industrial y comercial en su territorio. Es un municipio clave dentro del Área Metropolitana de Barcelona.",
+      "metaDesc": "Servicios profesionales de limpieza post incendio en {ciudad}. Extingix te ayuda a recuperar tu hogar o negocio. ¡Solicita presupuesto!",
+      "zonas": [
+        "Bellvitge",
+        "Collblanc",
+        "La Torrassa",
+        "San Joan Despí",
+        "Pubilla Cases",
+        "Ciutat Meridiana",
+        "Les Planes",
+        "Vilba Granada",
+        "Bernat Santillán."
+      ],
+      "serviciosActivos": [
+        "limpieza-post-incendio",
+        "limpieza-post-inundacion",
+        "limpieza-post-mortem",
+        "limpieza-diogenes",
+        "descontaminacion",
+        "restauracion-inmueble"
+      ]
+    },
+    {
+      "nombre": "Sant Adrià de Besòs",
+      "slug": "sant-adria-de-besos",
+      "seoIntro": "Sant Adrià de Besòs se encuentra en la {provincia} de Barcelona, cerca del puerto y con una rica historia industrial.  Es un municipio costero con acceso directo a la playa del Bogatell y cuenta con importantes zonas residenciales. Forma parte integral del área metropolitana.",
+      "metaDesc": "Limpiezas post incendio en {ciudad}. Extingix ofrece soluciones rápidas y eficientes para recuperar tu espacio. ¡Contacta ahora!",
+      "zonas": [
+        "Barri de la Llevantina",
+        "Barri de Fondo",
+        "Torreta Pelai",
+        "Marina Alta",
+        "Marina Baixa",
+        "Can Pinyó",
+        "Les Corts",
+        "El Pont."
+      ],
+      "serviciosActivos": [
+        "limpieza-post-incendio",
+        "limpieza-post-inundacion",
+        "limpieza-post-mortem",
+        "limpieza-diogenes",
+        "descontaminacion",
+        "restauracion-inmueble"
+      ]
+    },
+    {
+      "nombre": "Esplugues de Llobregat",
+      "slug": "esplugues-de-llobregat",
+      "seoIntro": "Esplugues de Llobregat es un municipio en la {provincia} de Barcelona, conocido por su calidad de vida y sus zonas verdes.  Se destaca por su modernismo arquitectónico y su ubicación estratégica cerca del aeropuerto de El Prat. Es una zona residencial de alto standing.",
+      "metaDesc": "Expertos en limpieza post incendio en {ciudad}. Extingix te ofrece la mejor solución para tu tranquilidad y seguridad. ¡Pide información!",
+      "zonas": [
+        "Centre",
+        "Montesquiu",
+        "Can Felícia",
+        "Fontanya",
+        "Collblanc",
+        "Les Planes",
+        "Sant Ramon",
+        "Via Augusta."
+      ],
+      "serviciosActivos": [
+        "limpieza-post-incendio",
+        "limpieza-post-inundacion",
+        "limpieza-post-mortem",
+        "limpieza-diogenes",
+        "descontaminacion",
+        "restauracion-inmueble"
+      ]
+    },
+    {
+      "nombre": "Mollet del Vallès",
+      "slug": "mollet-del-valles",
+      "seoIntro": "Mollet del Vallès se sitúa en la comarca del Vallès Oriental, dentro de la {provincia} de Barcelona.  Es un municipio con una fuerte tradición industrial y comercial, junto a una importante apuesta por los servicios y el ocio. Ofrece una buena conexión con Barcelona.",
+      "metaDesc": "Servicios profesionales de limpieza post incendio en {ciudad}. Extingix asegura resultados óptimos y precios competitivos. ¡Solicita tu presupuesto!",
+      "zonas": [
+        "Centre",
+        "La Vila",
+        "Plaça",
+        "El Turó",
+        "Les Pruneres",
+        "Can Baró",
+        "Sant Joan",
+        "Torrent Nova."
+      ],
+      "serviciosActivos": [
+        "limpieza-post-incendio",
+        "limpieza-post-inundacion",
+        "limpieza-post-mortem",
+        "limpieza-diogenes",
+        "descontaminacion",
+        "restauracion-inmueble"
+      ]
+    },
+    {
+      "nombre": "Badalona",
+      "slug": "badalona",
+      "seoIntro": "Badalona es una ciudad en la {provincia} de Barcelona, con una rica historia que se remonta a la época romana.  Es conocida por su patrimonio industrial y sus playas, así como por ser un importante centro comercial y de servicios. Forma parte del Baix Llobregat.",
+      "metaDesc": "Limpieza post incendio en {ciudad}. Extingix te ofrece soluciones integrales para restaurar tu propiedad rápidamente y eficazmente.",
+      "zonas": [
+        "Centre",
+        "Sant Quirze",
+        "Collègic",
+        "El Pont de Petroli",
+        "Casagemes",
+        "Rocafort",
+        "Morera."
+      ],
+      "serviciosActivos": [
+        "limpieza-post-incendio",
+        "limpieza-post-inundacion",
+        "limpieza-post-mortem",
+        "limpieza-diogenes",
+        "descontaminacion",
+        "restauracion-inmueble"
+      ]
+    },
+    {
+      "nombre": "Sant Joan Despí",
+      "slug": "sant-joan-despi",
+      "seoIntro": "Sant Joan Despí se encuentra en la {provincia} de Barcelona y es un municipio con una importante actividad económica y comercial.  Alberga el Camp Nou, estadio del FC Barcelona, y cuenta con una buena infraestructura de transporte que lo conecta con Barcelona. Es una zona residencial consolidada.",
+      "metaDesc": "Expertos en limpieza post incendio en {ciudad}. Extingix te proporciona un servicio profesional y discreto. ¡Contáctanos hoy mismo!",
+      "zonas": [
+        "Centre",
+        "Feixa Mirallers",
+        "Bon Pastor",
+        "Torrent d’en Vidalet",
+        "Can Llarg",
+        "Costa Bella",
+        "Plaça de l'Església."
+      ],
+      "serviciosActivos": [
+        "limpieza-post-incendio",
+        "limpieza-post-inundacion",
+        "limpieza-post-mortem",
+        "limpieza-diogenes",
+        "descontaminacion",
+        "restauracion-inmueble"
+      ]
+    }
+  ]
+}
