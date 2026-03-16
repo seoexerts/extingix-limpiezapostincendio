@@ -1,5 +1,5 @@
 /**
- * Catálogo global de servicios — Vaciados Terrassa Pro
+ * Catálogo global de servicios — Extingix Limpiezas Post Siniestros
  * Los textos admiten variables {ciudad}, {provincia}, {empresa} que se
  * interpolan en tiempo de build. Ver src/data/index.ts → interpolate().
  */
@@ -28,199 +28,194 @@ export interface ServicioBase {
 
 export const servicios: ServicioBase[] = [
   {
-    slug: 'vaciado-pisos',
-    nombre: 'Vaciado de pisos',
+    slug: 'limpieza-post-incendio',
+    nombre: 'Limpieza post incendio',
     descripcionCorta:
-      'Vaciado completo de pisos en {ciudad}. Retiramos muebles, enseres y trastos. Presupuesto gratuito. {empresa}.',
+      'Limpieza profesional tras incendio en {ciudad}. Eliminamos hollín, humo y olores. Recupera tu inmueble con {empresa}.',
     descripcionLarga:
-      'En {empresa} realizamos el vaciado integral de pisos en {ciudad} y toda la provincia de {provincia}. Nos encargamos de retirar muebles, electrodomésticos, ropa, trastos y cualquier tipo de enseres, dejando el inmueble completamente vacío y limpio. Ideal para herencias, cambios de piso, reformas o propiedades en alquiler.',
+      'En {empresa} realizamos la limpieza integral de inmuebles afectados por incendio en {ciudad} y toda la provincia de {provincia}. Eliminamos hollín, residuos de combustión, manchas de humo y olores persistentes mediante técnicas especializadas, dejando el espacio en condiciones seguras y listas para la restauración o el uso.',
     beneficios: [
-      'Vaciado completo en un solo día en la mayoría de casos',
-      'Retiramos todo: muebles, electrodomésticos, ropa y trastos',
-      'Presupuesto gratuito y sin compromiso en {ciudad}',
-      'Gestionamos el reciclaje y la donación de objetos en buen estado',
-      'Equipo propio sin subcontratas — más rapidez y control',
-      'Servicio disponible en {ciudad} y toda la provincia de {provincia}',
+      'Eliminación completa de hollín y residuos de combustión',
+      'Tratamiento de olores con maquinaria profesional de ozonización',
+      'Desinfección de superficies afectadas por humo y calor',
+      'Equipo especializado con EPIs adecuados para zonas siniestradas',
+      'Presupuesto gratuito con inspección en {ciudad} en menos de 24 h',
+      'Coordinación con aseguradoras y peritos si es necesario',
     ],
     proceso: [
       {
-        titulo: 'Visita o fotos para presupuesto',
+        titulo: 'Inspección y valoración',
         descripcion:
-          'Nos envías fotos del piso o concertamos una visita en {ciudad}. En menos de 24 horas recibes un presupuesto cerrado y sin sorpresas.',
+          'Visitamos el inmueble en {ciudad} para evaluar el alcance del siniestro. Identificamos zonas afectadas por hollín, humo y calor y elaboramos el plan de actuación.',
       },
       {
-        titulo: 'Confirmación y fecha',
+        titulo: 'Retirada de escombros y residuos',
         descripcion:
-          'Aceptas el presupuesto y fijamos el día. Nos adaptamos a tu disponibilidad, incluyendo fines de semana si es necesario.',
+          'Retiramos materiales quemados, escombros y residuos del incendio de forma segura, con gestión certificada de residuos peligrosos si es necesario.',
       },
       {
-        titulo: 'Vaciado completo',
+        titulo: 'Limpieza y descontaminación',
         descripcion:
-          'Nuestro equipo acude puntual, protege escaleras y zonas comunes, y vacía el piso de forma ordenada y eficiente.',
+          'Aplicamos técnicas específicas para eliminar hollín de paredes, techos y suelos. Tratamos superficies porosas y no porosas con productos homologados.',
       },
       {
-        titulo: 'Entrega y limpieza básica',
+        titulo: 'Eliminación de olores',
         descripcion:
-          'Dejamos el piso vacío y realizamos una limpieza básica de polvo y restos. El inmueble queda listo para visitar, reformar o alquilar.',
+          'Utilizamos equipos de ozonización y nebulización para neutralizar el olor a humo y los compuestos orgánicos volátiles. Entregamos el inmueble libre de olores.',
       },
     ],
     faqs: [
       {
-        pregunta: '¿Cuánto cuesta vaciar un piso en {ciudad}?',
+        pregunta: '¿Cuánto tarda la limpieza post incendio en {ciudad}?',
         respuesta:
-          'El precio depende del tamaño del piso y la cantidad de enseres. Un piso de 70–90 m² suele costar entre 250 € y 500 €. Ofrecemos presupuesto gratuito en {ciudad} — contáctanos y te lo enviamos en menos de 24 h.',
+          'Depende del tamaño y la gravedad del siniestro. Un piso con daños moderados suele requerir entre 1 y 3 días. Te damos el plazo exacto tras la inspección gratuita.',
       },
       {
-        pregunta: '¿Cuánto tiempo tarda el vaciado?',
+        pregunta: '¿Podéis coordinar con mi seguro?',
         respuesta:
-          'La mayoría de pisos se vacían en un solo día. Un piso de 3 habitaciones con mobiliario completo suele llevar entre 4 y 8 horas con nuestro equipo en {ciudad}.',
+          'Sí. Trabajamos habitualmente con aseguradoras y peritos en {ciudad}. Elaboramos informes detallados del trabajo realizado y podemos asistir a la peritación si es necesario.',
       },
       {
-        pregunta: '¿Qué hacéis con los muebles y objetos retirados?',
+        pregunta: '¿Se puede eliminar completamente el olor a humo?',
         respuesta:
-          'Separamos los objetos en buen estado para donarlos a entidades sociales o venderlos de segunda mano. El resto lo llevamos a puntos de reciclaje autorizados en {provincia}. Trabajamos de forma responsable con el medio ambiente.',
+          'En la gran mayoría de casos sí. Usamos equipos de ozonización profesional que neutralizan los compuestos responsables del olor a humo, incluso en materiales porosos.',
       },
       {
-        pregunta: '¿Podéis vaciar un piso con herencia o trámites pendientes?',
+        pregunta: '¿Cuándo se puede volver a ocupar el inmueble?',
         respuesta:
-          'Sí. Trabajamos habitualmente con gestorías, notarías y familiares en proceso de herencia en {ciudad}. Podemos coordinar el vaciado con los tiempos legales y documentar lo retirado si es necesario.',
+          'Una vez finalizada la limpieza y el tratamiento de olores, el inmueble es seguro para su ocupación. Te indicamos el momento exacto según el tipo de intervención realizada en {ciudad}.',
       },
       {
-        pregunta: '¿Hacéis el vaciado en fines de semana?',
+        pregunta: '¿Limpiáis también el exterior y zonas comunes del edificio?',
         respuesta:
-          'Sí, disponemos de servicio en fines de semana en {ciudad} con cita previa. Consúltanos disponibilidad al solicitar el presupuesto.',
+          'Sí. Actuamos en zonas comunes, fachadas, escaleras o sótanos afectados por el incendio, siempre con la autorización correspondiente de la comunidad o propiedad.',
       },
     ],
   },
 
   {
-    slug: 'vaciado-locales',
-    nombre: 'Vaciado de locales',
+    slug: 'limpieza-post-inundacion',
+    nombre: 'Limpieza post inundación',
     descripcionCorta:
-      'Vaciado de locales comerciales y naves en {ciudad}. Rápido, limpio y con gestión de residuos. {empresa}.',
+      'Limpieza y secado tras inundación en {ciudad}. Extracción de agua, desinfección y prevención de moho. {empresa}.',
     descripcionLarga:
-      'En {empresa} vaciamos locales comerciales, oficinas, almacenes y naves industriales en {ciudad} y la provincia de {provincia}. Retiramos estanterías, maquinaria, mobiliario de oficina, archivos y cualquier tipo de material, gestionando correctamente los residuos según la normativa vigente.',
+      'En {empresa} intervenimos de forma urgente en inmuebles afectados por inundaciones en {ciudad} y la provincia de {provincia}. Extraemos el agua estancada, secamos la estructura con maquinaria industrial, desinfectamos todas las superficies y tratamos para prevenir la aparición de moho, recuperando el inmueble en el menor tiempo posible.',
     beneficios: [
-      'Vaciado de locales, oficinas, almacenes y naves industriales',
-      'Desmontaje de estanterías, mostradores y mobiliario fijo',
-      'Gestión de residuos según normativa en {provincia}',
-      'Flexibilidad horaria para minimizar impacto en el negocio',
-      'Presupuesto gratuito adaptado al volumen real del local',
-      'Equipo con experiencia en vaciados comerciales en {ciudad}',
+      'Intervención urgente disponible 24/7 en {ciudad}',
+      'Extracción de agua con equipos de succión industrial',
+      'Secado profundo de estructura, paredes y suelos con deshumidificadores',
+      'Desinfección total para eliminar bacterias y agentes patógenos',
+      'Tratamiento preventivo antimoho en superficies porosas',
+      'Coordinación con aseguradoras y peritos en {provincia}',
     ],
     proceso: [
       {
-        titulo: 'Inspección del local',
+        titulo: 'Extracción de agua urgente',
         descripcion:
-          'Visitamos el local en {ciudad} o valoramos por fotos/vídeo. Identificamos materiales especiales o residuos que requieren gestión específica.',
+          'Acudimos de urgencia a {ciudad} y procedemos a la extracción del agua estancada con equipos de succión de alto rendimiento.',
       },
       {
-        titulo: 'Presupuesto detallado',
+        titulo: 'Secado industrial',
         descripcion:
-          'Te entregamos un presupuesto cerrado con el coste total, sin extras ocultos. Incluye transporte, mano de obra y gestión de residuos.',
+          'Instalamos deshumidificadores y ventiladores industriales para secar la estructura, suelos y paredes en el menor tiempo posible.',
       },
       {
-        titulo: 'Vaciado y desmontaje',
+        titulo: 'Limpieza y desinfección',
         descripcion:
-          'Nuestro equipo retira todo el contenido del local, desmonta elementos fijos si es necesario y carga los camiones de forma organizada.',
+          'Limpiamos todas las superficies afectadas y aplicamos desinfectantes de amplio espectro para eliminar bacterias, hongos y agentes patógenos.',
       },
       {
-        titulo: 'Gestión y certificado',
+        titulo: 'Tratamiento antimoho y seguimiento',
         descripcion:
-          'Llevamos los materiales a puntos autorizados en {provincia} y, si lo necesitas, emitimos certificado de gestión de residuos.',
+          'Aplicamos tratamiento preventivo antimoho y realizamos un seguimiento de la humedad residual hasta confirmar que el inmueble está completamente seco y seguro.',
       },
     ],
     faqs: [
       {
-        pregunta: '¿Podéis vaciar un local mientras sigo abierto?',
+        pregunta: '¿Atendéis urgencias de inundación en {ciudad}?',
         respuesta:
-          'Sí. Organizamos el vaciado por fases o en horario nocturno para no interrumpir tu actividad. Consúltanos y buscamos la solución más cómoda para tu negocio en {ciudad}.',
+          'Sí. Disponemos de servicio de urgencia 24/7 en {ciudad} y toda la provincia de {provincia}. Llámanos y gestionamos la respuesta inmediata.',
       },
       {
-        pregunta: '¿Gestionáis los residuos de maquinaria y electrónica?',
+        pregunta: '¿Cuánto tiempo tarda en secarse un piso inundado?',
         respuesta:
-          'Sí. Los equipos electrónicos, maquinaria y materiales especiales se llevan a gestores autorizados en {provincia}. Podemos emitir certificado de gestión si lo requieres para la baja de actividad.',
+          'Con nuestros equipos industriales, el secado de un piso estándar suele completarse en 3–7 días dependiendo del volumen de agua y el tipo de materiales afectados.',
       },
       {
-        pregunta: '¿Cuánto cuesta vaciar un local en {ciudad}?',
+        pregunta: '¿El moho es inevitable después de una inundación?',
         respuesta:
-          'El precio varía según el tamaño y el tipo de contenido. Un local pequeño de 50–80 m² suele estar entre 350 € y 700 €. Pídenos presupuesto gratuito y sin compromiso.',
+          'No si se actúa rápido. La clave es secar la estructura en las primeras 48–72 horas. Nuestro tratamiento antimoho preventivo reduce significativamente el riesgo de aparición posterior.',
       },
       {
-        pregunta: '¿Desmontáis estanterías y mobiliario fijo?',
+        pregunta: '¿Trabajáis con seguros de hogar?',
         respuesta:
-          'Sí, incluimos el desmontaje de estanterías, mostradores, mamparas y otro mobiliario fijo en el servicio estándar. Si hay elementos que requieren trabajo de albañilería, te lo indicamos en el presupuesto.',
-      },
-      {
-        pregunta: '¿Trabajáis en toda la provincia de {provincia}?',
-        respuesta:
-          'Sí. Vaciamos locales en {ciudad} y en todos los municipios de la provincia de {provincia}. El desplazamiento está incluido en el presupuesto para la zona de {ciudad} y alrededores.',
+          'Sí. Colaboramos con las principales aseguradoras y podemos facilitar toda la documentación necesaria para la tramitación del siniestro en {ciudad}.',
       },
     ],
   },
 
   {
-    slug: 'recogida-muebles',
-    nombre: 'Recogida de muebles',
+    slug: 'limpieza-post-mortem',
+    nombre: 'Limpieza post mortem',
     descripcionCorta:
-      'Recogida y retirada de muebles sueltos en {ciudad}. Rápido, sin esperas y con gestión responsable. {empresa}.',
+      'Limpieza post mortem en {ciudad}. Actuación discreta, desinfección biológica y recuperación del inmueble. {empresa}.',
     descripcionLarga:
-      'En {empresa} recogemos muebles sueltos, electrodomésticos y objetos voluminosos en {ciudad} y alrededores de {provincia}. No hace falta vaciar el piso entero: si solo necesitas deshacerte de un sofá, una cama, un armario o varios electrodomésticos, nos encargamos de la recogida y el transporte al punto limpio o centro de reutilización más cercano.',
+      'En {empresa} realizamos la limpieza y descontaminación biológica de inmuebles tras fallecimiento en {ciudad} y la provincia de {provincia}. Actuamos con total discreción, respeto y confidencialidad. Nuestro equipo especializado elimina fluidos biológicos, desinfecta a fondo y neutraliza olores, dejando el inmueble en condiciones seguras e higiénicas.',
     beneficios: [
-      'Recogida de muebles sueltos sin necesidad de vaciar el piso',
-      'Sofás, camas, armarios, electrodomésticos y objetos voluminosos',
-      'Donamos a entidades sociales los objetos en buen estado',
-      'Servicio rápido — muchas veces el mismo día o al día siguiente en {ciudad}',
-      'Sin desplazamientos ni gestiones para ti',
-      'Precio justo según el volumen real recogido',
+      'Actuación totalmente discreta y confidencial en {ciudad}',
+      'Descontaminación biológica certificada por técnicos especializados',
+      'Eliminación de fluidos biológicos con productos homologados',
+      'Neutralización completa de olores con tratamiento de ozonización',
+      'Gestión de residuos biológicos según normativa vigente en {provincia}',
+      'Disponibilidad 24/7 — actuamos cuando lo necesites',
     ],
     proceso: [
       {
-        titulo: 'Dinos qué quieres retirar',
+        titulo: 'Valoración discreta y confidencial',
         descripcion:
-          'Envíanos una lista o fotos de los muebles o enseres. Te damos precio inmediato para recogidas sencillas o presupuesto en 24 h para volúmenes mayores.',
+          'Visitamos el inmueble en {ciudad} con total discreción. Evaluamos el alcance de la contaminación biológica y establecemos el protocolo de actuación.',
       },
       {
-        titulo: 'Fijamos fecha y hora',
+        titulo: 'Descontaminación biológica',
         descripcion:
-          'Elegimos juntos el momento más cómodo para ti en {ciudad}. Podemos ajustarnos a mañanas, tardes o fines de semana.',
+          'Nuestro equipo, equipado con EPIs de nivel adecuado, elimina todos los fluidos biológicos y aplica desinfectantes homologados en todas las superficies afectadas.',
       },
       {
-        titulo: 'Recogida en tu domicilio',
+        titulo: 'Eliminación de olores',
         descripcion:
-          'Bajamos los muebles desde tu piso, protegemos escaleras y zonas comunes y los cargamos en nuestro vehículo. No tienes que mover nada.',
+          'Tratamos el inmueble con equipos de ozonización profesional para neutralizar completamente los olores derivados del fallecimiento.',
       },
       {
-        titulo: 'Destino responsable',
+        titulo: 'Entrega certificada',
         descripcion:
-          'Los muebles en buen estado van a centros de reutilización o entidades sociales. El resto, al punto limpio autorizado de {provincia}.',
+          'Emitimos certificado de descontaminación biológica. El inmueble queda en condiciones higiénicas y seguras para su uso.',
       },
     ],
     faqs: [
       {
-        pregunta: '¿Cuánto cuesta la recogida de un mueble en {ciudad}?',
+        pregunta: '¿Cómo de discreta es la intervención en {ciudad}?',
         respuesta:
-          'Depende del tipo y cantidad de piezas. Una recogida sencilla (sofá + mesa) suele costar entre 60 € y 120 €. Pídenos precio por WhatsApp con una foto y te respondemos enseguida.',
+          'Máxima discreción. Acudimos sin identificación visible en el vehículo, en el horario que prefieras y coordinamos el acceso para minimizar la exposición ante vecinos o terceros.',
       },
       {
-        pregunta: '¿Subís a buscar los muebles al piso?',
+        pregunta: '¿Cuánto tiempo tarda la limpieza post mortem?',
         respuesta:
-          'Sí, subimos hasta tu vivienda, desmontamos si es necesario y bajamos los muebles nosotros. No tienes que hacer ningún esfuerzo ni bajar nada a la calle.',
+          'La mayoría de intervenciones se completan en un día. El tiempo exacto depende del tamaño del inmueble y el tiempo transcurrido desde el fallecimiento.',
       },
       {
-        pregunta: '¿Podéis recoger electrodomésticos viejos?',
+        pregunta: '¿Emitís certificado de descontaminación?',
         respuesta:
-          'Sí. Recogemos frigoríficos, lavadoras, lavavajillas, televisores y cualquier electrodoméstico. Los llevamos a un gestor autorizado de RAEE (residuos de aparatos eléctricos) en {provincia}.',
+          'Sí. Entregamos certificado oficial de descontaminación biológica, necesario en muchos casos para la gestión del inmueble o tramitaciones legales.',
       },
       {
-        pregunta: '¿Qué pasa con los muebles que están en buen estado?',
+        pregunta: '¿Quién puede solicitar este servicio?',
         respuesta:
-          'Los entregamos a entidades sociales, asociaciones de ayuda o los ponemos en plataformas de segunda mano. Damos una segunda vida a todo lo que sea reutilizable antes de llevarlo al punto limpio.',
+          'Familiares, administradores de fincas, comunidades de propietarios, gestorías, notarías o cualquier persona con acceso legal al inmueble en {ciudad}.',
       },
       {
-        pregunta: '¿Hacéis recogidas urgentes en {ciudad}?',
+        pregunta: '¿Trabajáis en festivos y fines de semana?',
         respuesta:
-          'En muchos casos podemos recogerte el mismo día o al día siguiente en {ciudad}. Llámanos o escríbenos por WhatsApp y miramos disponibilidad inmediata.',
+          'Sí. Disponemos de servicio 24/7 incluyendo festivos en {ciudad}. En situaciones urgentes, podemos acudir en pocas horas.',
       },
     ],
   },
@@ -287,123 +282,123 @@ export const servicios: ServicioBase[] = [
   },
 
   {
-    slug: 'limpieza-post-vaciado',
-    nombre: 'Limpieza post vaciado',
+    slug: 'descontaminacion',
+    nombre: 'Descontaminación de inmuebles',
     descripcionCorta:
-      'Limpieza profunda tras el vaciado del inmueble en {ciudad}. Suelos, paredes, cocina y baños a fondo. {empresa}.',
+      'Descontaminación profesional de inmuebles en {ciudad}. Eliminación de agentes biológicos, químicos y contaminantes. {empresa}.',
     descripcionLarga:
-      'Tras el vaciado del inmueble, {empresa} realiza una limpieza profunda en {ciudad} para dejarlo listo para visita, venta o alquiler. Limpiamos suelos, paredes, cocina, baños y cualquier rincón, eliminando polvo, manchas y residuos acumulados. Combinable con el vaciado en un único servicio con precio cerrado.',
+      'En {empresa} realizamos la descontaminación integral de inmuebles en {ciudad} y la provincia de {provincia}. Actuamos ante contaminación por agentes biológicos, químicos, metales pesados o cualquier sustancia peligrosa, aplicando protocolos certificados y emitiendo documentación oficial que acredita la seguridad del inmueble.',
     beneficios: [
-      'Limpieza profunda de suelos, paredes y techos',
-      'Cocina y baños a fondo: azulejos, sanitarios, electrodomésticos',
-      'Eliminación de polvo, manchas, cal y residuos',
-      'Combinable con el vaciado — un servicio, un precio',
-      'Inmueble listo para visita, fotografía, venta o alquiler',
-      'Equipo propio sin subcontratas en {ciudad}',
+      'Protocolos certificados de descontaminación para todo tipo de agentes',
+      'Equipo técnico especializado con formación en riesgos biológicos y químicos',
+      'Documentación y certificado oficial de descontaminación en {ciudad}',
+      'Gestión de residuos peligrosos según normativa de {provincia}',
+      'Servicio disponible para particulares, comunidades y empresas',
+      'Asesoramiento previo gratuito — evaluamos el tipo de contaminación',
     ],
     proceso: [
       {
-        titulo: 'Combinado o independiente',
+        titulo: 'Diagnóstico de la contaminación',
         descripcion:
-          'Puedes contratar la limpieza post vaciado junto con el vaciado o de forma independiente una vez el inmueble ya está vacío.',
+          'Identificamos el tipo y alcance de la contaminación en el inmueble de {ciudad}. Si es necesario, tomamos muestras para análisis de laboratorio.',
       },
       {
-        titulo: 'Limpieza de zonas secas',
+        titulo: 'Plan de descontaminación',
         descripcion:
-          'Barremos y fregamos suelos, limpiamos paredes, ventanas, marcos y puertas, y eliminamos telarañas y polvo acumulado.',
+          'Diseñamos el protocolo específico según el agente contaminante, siguiendo las normativas vigentes en {provincia} y la legislación nacional.',
       },
       {
-        titulo: 'Cocina y baños',
+        titulo: 'Intervención especializada',
         descripcion:
-          'Desengrasamos encimeras, azulejos y electrodomésticos. Limpiamos sanitarios, grifería y desinfectamos baños a fondo.',
+          'Nuestro equipo, con los EPIs adecuados, ejecuta la descontaminación aplicando productos y técnicas homologadas para cada tipo de contaminante.',
       },
       {
-        titulo: 'Entrega lista para usar',
+        titulo: 'Verificación y certificación',
         descripcion:
-          'El inmueble queda limpio y en condiciones óptimas para ser visitado, fotografiado o entregado al nuevo inquilino o comprador.',
+          'Verificamos la efectividad del tratamiento y emitimos el certificado oficial de descontaminación. El inmueble queda seguro y documentado.',
       },
     ],
     faqs: [
       {
-        pregunta: '¿Puedo contratar solo la limpieza sin el vaciado?',
+        pregunta: '¿Para qué situaciones es necesaria la descontaminación?',
         respuesta:
-          'Sí. Si el inmueble ya está vacío, podemos realizar únicamente la limpieza post vaciado. Contáctanos con fotos y te damos presupuesto gratuito.',
+          'Es necesaria tras incendios con materiales tóxicos, derrames químicos, contaminación biológica, presencia de amianto, metales pesados u otras sustancias peligrosas en inmuebles de {ciudad}.',
       },
       {
-        pregunta: '¿Cuánto cuesta la limpieza post vaciado en {ciudad}?',
+        pregunta: '¿Emitís certificado oficial de descontaminación?',
         respuesta:
-          'El precio depende del tamaño y el estado del inmueble. Un piso estándar suele estar entre 120 € y 250 €. Combinado con el vaciado obtienes un precio más ajustado.',
+          'Sí. Entregamos certificado oficial que acredita que el inmueble ha sido descontaminado correctamente. Este documento es frecuentemente exigido por aseguradoras, administraciones o para trámites de compraventa.',
       },
       {
-        pregunta: '¿Quedará listo para fotos inmobiliarias?',
+        pregunta: '¿Trabajáis con comunidades de propietarios en {ciudad}?',
         respuesta:
-          'Sí. La limpieza post vaciado deja el inmueble en condiciones óptimas para fotografía inmobiliaria, visitas de compradores o entrega de llaves.',
+          'Sí. Atendemos tanto a particulares como a comunidades de propietarios, administradores de fincas y empresas en {ciudad} y toda la provincia de {provincia}.',
       },
       {
-        pregunta: '¿Limpiais también garajes y trasteros?',
+        pregunta: '¿Cómo se gestionan los residuos peligrosos?',
         respuesta:
-          'Sí. Además de viviendas y locales, limpiamos garajes, trasteros y cualquier espacio anexo que necesites dejar en perfectas condiciones en {ciudad}.',
+          'Los residuos peligrosos se gestionan a través de gestores autorizados en {provincia}, cumpliendo estrictamente con la normativa de residuos peligrosos y emitiendo los albaranes correspondientes.',
       },
     ],
   },
 
   {
-    slug: 'pintura-express',
-    nombre: 'Pintura express',
+    slug: 'restauracion-inmueble',
+    nombre: 'Restauración de inmuebles',
     descripcionCorta:
-      'Servicio de pintura express en {ciudad} para pisos y locales recién vaciados. Acabado profesional en 24–48 h. {empresa}.',
+      'Restauración integral de inmuebles tras siniestro en {ciudad}. Obras, pintura y acabados para devolver el inmueble a su estado original. {empresa}.',
     descripcionLarga:
-      'Con el servicio de pintura express de {empresa} en {ciudad}, pintamos pisos y locales recién vaciados en 24–48 horas con acabado profesional. Ideal para rentabilizar el inmueble lo antes posible. Combinable con el vaciado y la limpieza en un único servicio integral con precio cerrado.',
+      'En {empresa} completamos la recuperación de inmuebles tras siniestros en {ciudad} y la provincia de {provincia} con el servicio de restauración integral. Tras la limpieza y descontaminación, nuestro equipo realiza las obras de reparación, pintura, sustitución de revestimientos y todos los acabados necesarios para devolver el inmueble a su estado original o mejor.',
     beneficios: [
-      'Acabado profesional en 24–48 horas en {ciudad}',
-      'Pintura de paredes y techos con materiales de calidad',
-      'Precio cerrado — sin extras ni sorpresas al finalizar',
-      'Combinable con vaciado y limpieza en un servicio integral',
-      'Inmueble listo para alquilar o vender en tiempo récord',
-      'Equipo propio especializado en pintura de interiores',
+      'Servicio integral: limpieza + descontaminación + restauración en {ciudad}',
+      'Reparación de estructura, paredes, techos y suelos dañados',
+      'Pintura y revestimientos con materiales de calidad',
+      'Presupuesto cerrado sin sorpresas al finalizar',
+      'Coordinación total con aseguradoras para la tramitación del siniestro',
+      'Equipo multidisciplinar propio — un único interlocutor para todo',
     ],
     proceso: [
       {
-        titulo: 'Presupuesto por fotos o visita',
+        titulo: 'Evaluación de daños estructurales',
         descripcion:
-          'Envíanos fotos del inmueble vacío o concertamos una visita en {ciudad}. Te damos precio cerrado en menos de 24 horas.',
+          'Evaluamos los daños en la estructura, instalaciones y acabados del inmueble en {ciudad} para elaborar el presupuesto completo de restauración.',
       },
       {
-        titulo: 'Preparación de superficies',
+        titulo: 'Trabajos de reparación',
         descripcion:
-          'Protegemos suelos, marcos y elementos que no se pintan. Reparamos pequeños desperfectos y aplicamos imprimación si es necesario.',
+          'Reparamos techos, paredes y suelos dañados. Sustituimos elementos estructurales si es necesario y preparamos las superficies para los acabados.',
       },
       {
-        titulo: 'Pintura en 24–48 horas',
+        titulo: 'Pintura y revestimientos',
         descripcion:
-          'Aplicamos la pintura en dos manos con rodillo profesional. En la mayoría de pisos de {ciudad} terminamos en un solo día de trabajo.',
+          'Aplicamos pintura, alicatados, pavimentos y todos los revestimientos necesarios para devolver el inmueble a su estado original.',
       },
       {
-        titulo: 'Entrega y revisión',
+        titulo: 'Entrega y revisión final',
         descripcion:
-          'Revisamos el acabado contigo y dejamos el inmueble limpio y listo para su uso inmediato.',
+          'Entregamos el inmueble completamente restaurado. Revisamos cada detalle contigo y facilitamos toda la documentación para la aseguradora.',
       },
     ],
     faqs: [
       {
-        pregunta: '¿Cuánto cuesta pintar un piso en {ciudad}?',
+        pregunta: '¿Podéis gestionar toda la restauración tras un incendio o inundación?',
         respuesta:
-          'Un piso de 70–90 m² suele costar entre 400 € y 800 € según el estado de las paredes. Pídenos presupuesto gratuito con fotos.',
+          'Sí. Ofrecemos el servicio completo desde la limpieza inicial hasta la entrega del inmueble restaurado en {ciudad}, coordinando todos los gremios necesarios con un único presupuesto.',
       },
       {
-        pregunta: '¿En cuánto tiempo pintáis un piso?',
+        pregunta: '¿Trabajáis directamente con las aseguradoras?',
         respuesta:
-          'La mayoría de pisos estándar los pintamos en 1–2 días. Para locales o viviendas grandes, te indicamos el plazo exacto en el presupuesto.',
+          'Sí. Colaboramos con las principales aseguradoras y peritajes en {ciudad}. Elaboramos informes detallados y facilitamos la gestión del siniestro para que no tengas que preocuparte de nada.',
       },
       {
-        pregunta: '¿Incluye la reparación de desperfectos en las paredes?',
+        pregunta: '¿Cuánto tarda la restauración de un piso tras un siniestro?',
         respuesta:
-          'Incluimos la reparación de pequeños agujeros y grietas superficiales. Para desperfectos estructurales mayores, lo presupuestamos aparte.',
+          'Depende de la gravedad de los daños. Un siniestro moderado suele restaurarse en 2–4 semanas. Te damos el plazo exacto tras la inspección gratuita en {ciudad}.',
       },
       {
-        pregunta: '¿Podéis combinar vaciado, limpieza y pintura?',
+        pregunta: '¿El presupuesto incluye materiales y mano de obra?',
         respuesta:
-          'Sí. Ofrecemos el servicio integral completo: vaciado + limpieza post vaciado + pintura express en {ciudad}, con un único presupuesto cerrado.',
+          'Sí. El presupuesto cerrado incluye todos los materiales, mano de obra y gestión de residuos. Sin sorpresas ni extras al finalizar la obra.',
       },
     ],
   },
