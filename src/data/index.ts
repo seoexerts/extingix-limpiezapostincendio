@@ -15,11 +15,10 @@ import { EMPRESA } from './empresa';
 
 // ── JSON de ciudades ──────────────────────────────────────────────────────────
 // ⚠️  Sustituye estos imports por los JSONs de tu proyecto (generados con generator.html)
-import ciudadPrincipalRaw from './ciudades/ciudad-principal.json';
+import barcelonaRaw from './ciudades/barcelona.json';
 
 const rawCiudades = [
-  ciudadPrincipalRaw,
-  // Añade aquí más ciudades en orden (la primera = ciudad principal del sitio)
+  barcelonaRaw,
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 
