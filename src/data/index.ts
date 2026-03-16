@@ -1,13 +1,14 @@
 /**
  * Punto de entrada único del sistema de datos.
  *
- * Para añadir una ciudad nueva:
- *   1. Crea src/data/ciudades/<slug>.json siguiendo la misma estructura.
- *   2. Importa el JSON aquí y añádelo al array rawCiudades.
+ * Para añadir ciudades secundarias:
+ *   Añade un array "ciudadesSecundarias" en el JSON de la ciudad principal.
+ *   Solo necesitan: nombre, slug, seoIntro, metaDesc, zonas.
+ *   Heredan automáticamente: telefono, email, direccion, codigoPostal, lat, lng, provincia.
  *
  * Para añadir un servicio nuevo:
  *   1. Añade la entrada en src/data/servicios.ts.
- *   2. Referencia el slug en serviciosActivos de cada ciudad que lo ofrezca.
+ *   2. Referencia el slug en serviciosActivos de la ciudad principal.
  */
 
 import { servicios as catalogoServicios } from './servicios';
@@ -68,34 +69,54 @@ function interpolateDeep<T>(obj: T, vars: Record<string, string>): T {
   return obj;
 }
 
-// ── Build de ciudades ─────────────────────────────────────────────────────────
-export const ciudades: Ciudad[] = rawCiudades.map((raw) => {
+// ── Construir una ciudad a partir de sus datos y los datos base de la principal ──
+function buildCiudad(data: any, main: any): Ciudad {
   const vars = {
-    ciudad: raw.nombre,
-    provincia: raw.provincia,
-    empresa: EMPRESA.nombre,
+    ciudad:   data.nombre,
+    provincia: main.provincia,
+    empresa:  EMPRESA.nombre,
   };
 
-  const serviciosResueltos: ServicioResuelto[] = raw.serviciosActivos
+  const slugsActivos: string[] = data.serviciosActivos ?? main.serviciosActivos ?? [];
+  const serviciosResueltos: ServicioResuelto[] = slugsActivos
     .map((slug) => catalogoServicios.find((s) => s.slug === slug))
     .filter((s): s is (typeof catalogoServicios)[number] => s !== undefined)
     .map((s) => interpolateDeep(s, vars));
 
+  const zonasRaw = data.zonas ?? [];
+  const zonas: string[] = Array.isArray(zonasRaw)
+    ? zonasRaw
+    : String(zonasRaw).split(',').map((z: string) => z.trim()).filter(Boolean);
+
   return {
-    slug: raw.slug,
-    nombre: raw.nombre,
-    provincia: raw.provincia,
-    lat: raw.lat,
-    lng: raw.lng,
-    telefono: raw.telefono,
-    email: raw.email,
-    direccion: raw.direccion,
-    codigoPostal: raw.codigoPostal,
-    zonas: raw.zonas,
-    servicios: serviciosResueltos,
-    seoIntro: interpolate((raw as any).seoIntro ?? '', vars),
-    metaDesc: interpolate((raw as any).metaDesc ?? '', vars),
+    slug:         data.slug,
+    nombre:       data.nombre,
+    provincia:    data.provincia    ?? main.provincia,
+    lat:          data.lat          ?? main.lat          ?? 0,
+    lng:          data.lng          ?? main.lng          ?? 0,
+    telefono:     main.telefono,
+    email:        main.email,
+    direccion:    main.direccion,
+    codigoPostal: data.codigoPostal ?? main.codigoPostal ?? '',
+    zonas,
+    servicios:    serviciosResueltos,
+    seoIntro:     interpolate(data.seoIntro  ?? '', vars),
+    metaDesc:     interpolate(data.metaDesc  ?? '', vars),
   };
+}
+
+// ── Build de ciudades ─────────────────────────────────────────────────────────
+export const ciudades: Ciudad[] = rawCiudades.flatMap((raw) => {
+  const result: Ciudad[] = [];
+
+  // Ciudad principal
+  result.push(buildCiudad(raw, raw));
+
+  // Ciudades secundarias embebidas (heredan contacto de la principal)
+  const secundarias: any[] = (raw as any).ciudadesSecundarias ?? [];
+  secundarias.forEach((sec) => result.push(buildCiudad(sec, raw)));
+
+  return result;
 });
 
 // ── Helpers de navegación (para interlinking) ─────────────────────────────────

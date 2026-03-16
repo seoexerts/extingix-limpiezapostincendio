@@ -6,7 +6,7 @@ import { siteConfig } from '../config/site';
 
 const canonical   = `${siteConfig.web}/sobre-nosotros/`;
 const title       = `Sobre nosotros | ${EMPRESA.nombre}`;
-const description = `Conoce la historia y valores de ${EMPRESA.nombreLegal}. Especialistas en vaciado de pisos y locales en ${ciudades[0].nombre} y toda la provincia de ${ciudades[0].provincia}.`;
+const description = `Conoce la historia y valores de ${EMPRESA.nombreLegal}. Especialistas en ${siteConfig.serviceType} en ${ciudades[0].nombre} y toda la provincia de ${ciudades[0].provincia}.`;
 
 const ciudad     = ciudades[0].nombre;
 const provincia  = ciudades[0].provincia;
@@ -17,22 +17,22 @@ const hitos = [
   {
     año: siteConfig.foundingYear,
     titulo: `Los comienzos en ${ciudad}`,
-    texto: `Fundamos la empresa en ${ciudad} con un único objetivo: ofrecer un servicio de vaciado honesto, sin sorpresas en la factura y con gestión de residuos responsable. Empezamos con un equipo de tres personas y el boca a boca como única publicidad.`,
+    texto: `Fundamos ${EMPRESA.nombre} en ${ciudad} con un único objetivo: ofrecer ${siteConfig.serviceType} de forma honesta, rápida y certificada. Empezamos con un equipo de tres técnicos especializados y el boca a boca como única publicidad.`,
   },
   {
     año: '2017',
     titulo: `Expansión por ${comarca}`,
-    texto: `Tras consolidar nuestra presencia en ${ciudad}, ampliamos el servicio a los municipios vecinos de ${comarca}: ${otrosMunicipios}. La confianza de nuestros clientes fue el mejor motor de crecimiento.`,
+    texto: `Tras consolidar nuestra presencia en ${ciudad}, ampliamos el servicio a los municipios vecinos de ${comarca}${otrosMunicipios ? ': ' + otrosMunicipios : ''}. La confianza de nuestros clientes fue el mejor motor de crecimiento.`,
   },
   {
     año: '2020',
-    titulo: 'Superando los momentos difíciles',
-    texto: `Durante los años más complicados mantuvimos el servicio activo con todos los protocolos de seguridad. Muchas familias necesitaron nuestro apoyo para gestionar herencias y vaciados en circunstancias muy difíciles. Estuvimos ahí.`,
+    titulo: 'Siempre disponibles',
+    texto: `Durante los años más complicados mantuvimos el servicio activo con todos los protocolos de seguridad. Muchas familias necesitaron nuestra intervención urgente en momentos muy difíciles. Estuvimos ahí, con discreción y profesionalidad.`,
   },
   {
     año: '2023',
-    titulo: `Referentes en vaciados en la provincia de ${provincia}`,
-    texto: `Hoy operamos en ${ciudades.length} municipios de la provincia de ${provincia} con equipo propio en cada uno. Más de 500 familias y empresas han confiado en nosotros. Seguimos creciendo sin perder la cercanía del servicio local.`,
+    titulo: `Referentes en ${siteConfig.serviceType} en ${provincia}`,
+    texto: `Hoy operamos en ${ciudades.length} municipios de la provincia de ${provincia} con equipo técnico propio. Más de 500 familias y empresas han confiado en nosotros. Seguimos creciendo sin perder la cercanía del servicio local.`,
   },
 ];
 
@@ -50,8 +50,8 @@ const valores = [
   },
   {
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
-    titulo: 'Gestión de residuos certificada',
-    texto: `Llevamos todos los residuos a gestores autorizados en la provincia de ${provincia}. Podemos emitir certificado de gestión para herencias, bajas de actividad o cualquier trámite que lo requiera.`,
+    titulo: 'Certificado oficial de descontaminación',
+    texto: `Emitimos certificado oficial al finalizar cada intervención. Documento válido para aseguradoras, administraciones y cualquier trámite legal que lo requiera en ${provincia}.`,
   },
   {
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
@@ -65,8 +65,8 @@ const valores = [
   },
   {
     icono: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
-    titulo: 'Donación a entidades sociales',
-    texto: 'Los muebles y objetos en buen estado no acaban en el vertedero. Los donamos a asociaciones locales y canales de segunda mano, dándoles una segunda vida.',
+    titulo: 'Coordinación con aseguradoras',
+    texto: `Colaboramos con las principales aseguradoras en ${ciudad}. Elaboramos informes detallados del siniestro y el trabajo realizado, facilitando la tramitación del seguro.`,
   },
 ];
 
@@ -75,13 +75,13 @@ const equipo = [
   {
     nombre: 'Marc Puig',
     rol: 'Fundador y responsable de operaciones',
-    descripcion: `Natural de ${ciudad}, lleva más de 10 años coordinando vaciados en ${comarca}. Supervisa personalmente cada trabajo y garantiza que el presupuesto acordado sea el precio final.`,
+    descripcion: `Natural de ${ciudad}, lleva más de 10 años coordinando intervenciones post siniestro en ${comarca}. Supervisa personalmente cada trabajo y garantiza que el protocolo se ejecute correctamente.`,
     iniciales: 'MP',
   },
   {
     nombre: 'Jordi Ferrer',
     rol: 'Jefe de equipo',
-    descripcion: `Responsable del equipo de operarios en ${ciudad} y municipios cercanos. Especialista en vaciados de herencia y casos que requieren especial sensibilidad.`,
+    descripcion: `Responsable del equipo técnico en ${ciudad} y municipios cercanos. Especialista en limpiezas post mortem y casos que requieren máxima discreción y sensibilidad.`,
     iniciales: 'JF',
   },
   {
@@ -113,12 +113,12 @@ const equipo = [
     <div class="container page-hero-inner">
       <div class="page-hero-text">
         <span class="eyebrow">Quiénes somos</span>
-        <h1>Especialistas en vaciados en {ciudad} desde {siteConfig.foundingYear}</h1>
+        <h1>Especialistas en {siteConfig.serviceType} en {ciudad} desde {siteConfig.foundingYear}</h1>
         <p>
           Somos <strong>{EMPRESA.nombreLegal}</strong>, empresa local de {ciudad} especializada
-          en vaciado de pisos, locales y recogida de muebles en {comarca} y toda la provincia
-          de {provincia}. Más de 10 años haciendo las cosas bien, sin letra pequeña y con
-          precio cerrado en cada trabajo.
+          en {siteConfig.serviceType} en {comarca} y toda la provincia de {provincia}.
+          Más de 10 años recuperando inmuebles tras siniestros, con protocolos certificados
+          y coordinación directa con aseguradoras.
         </p>
         <a href="/contacto" class="btn btn-primary btn-lg">Solicitar presupuesto gratis</a>
       </div>

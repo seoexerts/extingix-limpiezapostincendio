@@ -4,47 +4,15 @@ import FAQSchema from '../components/FAQSchema.astro';
 import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
 import { ciudades, EMPRESA } from '../data/index';
 import { siteConfig } from '../config/site';
+import { content } from '../config/content';
 
 const title       = `Preguntas frecuentes | ${EMPRESA.nombre}`;
-const description = `Resolvemos las dudas más habituales sobre nuestros servicios en ${ciudades.map(c=>c.nombre).join(', ')}: presupuesto, plazos, garantía y zonas de cobertura.`;
+const description = `Resolvemos las dudas más habituales sobre ${siteConfig.serviceType} en ${ciudades.map(c=>c.nombre).join(', ')}: presupuesto, plazos, urgencias y zonas de cobertura.`;
 
-const ciudad   = ciudades[0].nombre;
+const ciudad    = ciudades[0].nombre;
 const canonical = `${siteConfig.web}/faq/`;
 
-const faqs = [
-  {
-    pregunta: `¿Cuánto cuesta vaciar un piso en ${ciudad}?`,
-    respuesta: `El precio depende del tamaño y el volumen de enseres. Un piso de 70–90 m² en ${ciudad} suele estar entre 250 € y 500 €. Te enviamos presupuesto gratuito en menos de 24 horas, sin visita previa en muchos casos (basta con fotos por WhatsApp).`,
-  },
-  {
-    pregunta: '¿Cuánto tiempo tarda el vaciado de un piso?',
-    respuesta: 'La mayoría de pisos se vacían en un solo día. Un piso de 3 habitaciones con mobiliario completo lleva entre 4 y 8 horas con nuestro equipo. Los locales comerciales dependen del volumen y del tipo de mobiliario.',
-  },
-  {
-    pregunta: '¿El presupuesto es gratuito y sin compromiso?',
-    respuesta: `Sí, 100% gratuito y sin compromiso. En muchos casos te lo damos por teléfono o WhatsApp con fotos del inmueble. Si el trabajo lo requiere, hacemos visita previa en ${ciudad} también sin coste.`,
-  },
-  {
-    pregunta: '¿Qué hacéis con los muebles y objetos retirados?',
-    respuesta: 'Separamos los objetos en buen estado para donarlos a entidades sociales o canales de segunda mano. El resto se lleva a puntos de reciclaje autorizados. Podemos emitir certificado de gestión de residuos si lo necesitas.',
-  },
-  {
-    pregunta: `¿Podéis vaciar un local comercial en ${ciudad}?`,
-    respuesta: `Sí. Vaciamos oficinas, tiendas, almacenes y naves industriales en ${ciudad} y comarca. Desmontamos estanterías y mobiliario fijo, y gestionamos los residuos con certificado incluido. Nos adaptamos a horarios fuera de jornada para no interrumpir tu actividad.`,
-  },
-  {
-    pregunta: '¿Podéis vaciar un piso de herencia con trámites pendientes?',
-    respuesta: 'Sí. Trabajamos habitualmente con gestorías, notarías y familiares en proceso de herencia. Podemos coordinar el vaciado con los tiempos legales y documentar lo retirado si es necesario.',
-  },
-  {
-    pregunta: '¿Recogéis muebles sueltos sin necesidad de vaciar el piso entero?',
-    respuesta: 'Sí. Si solo necesitas retirar un sofá, una cama, armarios o electrodomésticos, subimos hasta tu piso a recogerlos. El precio se calcula por volumen y en muchos casos podemos atenderte el mismo día.',
-  },
-  {
-    pregunta: '¿Trabajáis en fines de semana?',
-    respuesta: 'Sí, disponemos de servicio en fines de semana con cita previa. Consulta disponibilidad al solicitar el presupuesto.',
-  },
-];
+const faqs = content.faqs;
 ---
 
 <BaseLayout title={title} description={description} canonical={canonical}>
@@ -60,9 +28,9 @@ const faqs = [
   <div class="page-header">
     <div class="container">
       <span class="eyebrow">Preguntas frecuentes · {ciudad}</span>
-      <h1>Resolvemos tus dudas sobre el vaciado en {ciudad}</h1>
+      <h1>Resolvemos tus dudas sobre {siteConfig.serviceType} en {ciudad}</h1>
       <p class="page-header-sub">
-        Todo lo que necesitas saber antes de contratar nuestros servicios de vaciado y limpieza en {ciudad}.
+        Todo lo que necesitas saber antes de contratar nuestros servicios en {ciudad}.
         ¿No encuentras tu pregunta? <a href="/contacto">Escríbenos directamente</a>.
       </p>
     </div>
@@ -70,7 +38,7 @@ const faqs = [
 
   <section class="page-section" aria-labelledby="faq-lista-heading">
     <div class="container">
-      <h2 id="faq-lista-heading" class="faq-section-heading">Preguntas frecuentes sobre vaciado en {ciudad}</h2>
+      <h2 id="faq-lista-heading" class="faq-section-heading">Preguntas frecuentes sobre {siteConfig.serviceType} en {ciudad}</h2>
       <div class="faq-list">
         {faqs.map((faq, i) => (
           <details class="faq-item" open={i === 0 || undefined}>
@@ -89,11 +57,13 @@ const faqs = [
 
       <div class="faq-links">
         <p>
-          Explora nuestros <a href="/servicios/">servicios de vaciado y limpieza</a>,
-          o consulta directamente las páginas de
-          <a href={`/${ciudades[0].slug}/vaciado-pisos/`}>vaciado de pisos en {ciudades[0].nombre}</a>,
-          <a href={`/${ciudades[0].slug}/vaciado-locales/`}>vaciado de locales en {ciudades[0].nombre}</a>
-          y <a href={`/${ciudades[0].slug}/recogida-muebles/`}>recogida de muebles en {ciudades[0].nombre}</a>.
+          Explora todos nuestros <a href="/servicios/">servicios en {ciudad}</a>
+          {ciudades[0].servicios.slice(0, 2).map((s, i) => (
+            <span>
+              {i === 0 ? ', o consulta ' : ' y '}
+              <a href={`/${ciudades[0].slug}/${s.slug}/`}>{s.nombre.toLowerCase()} en {ciudades[0].nombre}</a>
+            </span>
+          ))}.
         </p>
       </div>
 
